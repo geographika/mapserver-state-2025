@@ -1,0 +1,158 @@
+<section data-markdown>
+    <script type="text/template">
+        <img class="plain" src="images/banner.png" style="background: none;" />
+
+
+        ## State of MapServer 2025
+
+        #### by Seth Girvin
+
+
+        <img class="plain" src="images/compass-logo.png" style="background: none; width: 50%;" />
+        <br />
+        <img src="images/foss4g.png" style="width: 20%; border-color: black; border-width: thin; border-style: solid;" />
+    </script>
+</section>
+
+<section data-markdown data-background="images/MapServer_logo.svg.png" data-background-opacity="0.25" data-background-size="50%">
+    <script type="text/template">
+        ### MapServer 8.4 Release
+
+        - [MapServer 8.4.0](https://mapserver.org/development/announce/8-4.html) released 15th of January 2025
+        - **16** contributors to this release
+        - **173** Commits
+        - Full [CHANGELOG](https://mapserver.org/development/changelog/changelog-8-4.html)
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+        ## New Blending Operations
+
+        - `hsl-color`, `hsl-hue`, `hsl-luminosity`, `hsl-saturation`
+        - See [LAYER COMPOSITE](https://www.mapserver.org/mapfile/composite.html) for more details
+
+        <img class="border" src="images/compop-trees.png" style="max-width: 50%;" />
+    </script>
+</section>
+
+<section data-markdown data-background="images/raster-labels.png" data-background-opacity="0.35">
+    <script type="text/template">
+        ## CONNECTIONTYPE RASTERLABEL
+
+        - [MS RFC 139: Raster labeling](https://mapserver.org/development/rfc/ms-rfc-139.html)
+
+        <pre>
+<code class="language-scala" data-trim>
+        LAYER
+            NAME "labels"
+            TYPE POINT
+            CONNECTIONTYPE RASTERLABEL
+            DATA "crop_4326_ocs_0-30cm_mean.tif"
+            CLASS
+                TEXT (tostring([value],"%.1f"))
+    </code></pre>
+        <div class="meta">
+            Raster image from <a href="https://maps.isric.org/">ISRIC</a>
+        </div>
+    </script>
+</section>
+
+<section data-markdown data-background="images/integrated-openlayers.png" data-background-opacity="0.2" data-background-size="95%">
+    <script type="text/template">
+        ### Integrated OpenLayers Viewer
+
+        - Updated to v10 of OpenLayers (from OpenLayers2)
+        - add `&FORMAT=application/openlayers` to WMS request
+        - Live demo: [demo.mapserver.org](https://demo.mapserver.org/cgi-bin/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX=-90,-180,90,180&CRS=EPSG:4326&WIDTH=4096&HEIGHT=4096&LAYERS=WMS_server&STYLES=&FORMAT=application/openlayers)
+    </script>
+</section>
+
+<section>
+    <div style="display: flex; align-items: center;">
+        <!-- Left Column: List -->
+        <div style="flex: 1; padding-right: 2em;">
+            <h4>OpenLayers Examples</h4>
+            <ul style="font-size: 0.7em;">
+                <li><a href="https://openlayers.org/en/latest/examples/mapserver-wms.html" target="_blank">MapServer WMS</a></li>
+                <li><a href="https://openlayers.org/en/latest/examples/mapserver-ogc-features.html" target="_blank">MapServer OGC Features API</a></li>
+                <li><a href="https://openlayers.org/en/latest/examples/mapserver-cgi.html" target="_blank">MapServer CGI</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div style="flex: 1; text-align: center;">
+            <img src="images/ol-ogc-features-example.png" alt="MapServer OGC Features Example" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+</section>
+
+
+
+<section data-markdown>
+    <script type="text/template">
+        ## Conda Builds
+
+        - [Windows, Linux, and OSX CI builds](https://github.com/MapServer/MapServer/pull/7102)
+
+        <pre>
+<code class="language-powershell" data-trim>
+> conda create --yes --name mapserver
+> conda activate mapserver
+> conda install --yes -c conda-forge mapserver
+> mapserv -v
+MapServer version 8.4.0 PROJ version 9.6 GDAL 
+> map2img -m heat.map -o output.png
+</code>
+</pre>
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+        ### [RFC 140](https://mapserver.org/development/rfc/ms-rfc-138.html) MapServer Homepage
+
+        Part of upcoming [8.6 release](https://github.com/MapServer/MapServer/milestone/65)
+
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <img src="images/mapserver-index-page.png" style="max-width: 45%; border: 1px solid black;" />
+            <img src="images/mapserver-index-page-json.png" style="max-width: 45%; border: 1px solid black;" />
+        </div>
+    </script>
+</section>
+
+<section data-markdown data-background-image="images/users-between-lines-solid.svg" data-background-size="40%" data-background-opacity="10%">
+    <script type="text/template">
+        ## Workshop - Getting Started with MapServer
+
+        - First presented at [FOSS4G Europe 2024](https://talks.osgeo.org/foss4g-europe-2024-workshops/talk/HMEM8Z/)
+        - Again here at [FOSS4G Europe 2025](https://talks.osgeo.org/foss4g-europe-2025-workshops/talk/F3GHKV/)
+        - Available at https://geographika.github.io/getting-started-with-mapserver/
+    </script>
+</section>
+
+<section data-markdown data-background-image="images/heart-regular.svg" data-background-size="20%" data-background-opacity="10%">
+    <script type="text/template">
+        ### Supporting MapServer
+
+        [Sponsorship](https://github.com/MapServer/MapServer/wiki/Sponsorship) and [Sponsorship Opportunities](https://github.com/MapServer/MapServer/wiki/MapServer-2024-Sponsorship-Opportunities)
+        - Features - OGC API - Maps, Coverages, Tiles
+        - Security and Vulnerability Patches, Code Maintenance, Documentation
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+        <img class="plain" src="images/banner.png" style="background: none;" />
+
+        ### Thanks for Listening!
+
+        <a href="https://mastodon.social/@geographika" style="text-decoration: none;">
+            <img src="images/mastodon.png" alt="Mastodon Icon" style="width: 50px; vertical-align: middle;">
+            <span style="vertical-align: middle;">@geographika</span>
+        </a>
+
+        <a href="https://compass.ie/"><img class="plain" src="images/compass-logo.png" style="background: none; width: 50%;" /></a>
+
+    </script>
+</section>
