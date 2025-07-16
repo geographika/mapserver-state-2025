@@ -58,6 +58,48 @@
     </script>
 </section>
 
+<section data-markdown>
+    <script type="text/template">
+        ## Conda Builds
+
+        - [Windows, Linux, and OSX CI builds](https://github.com/MapServer/MapServer/pull/7102)
+
+        <pre>
+<code class="language-powershell" data-trim>
+> conda create --yes --name mapserver
+> conda activate mapserver
+> conda install --yes -c conda-forge mapserver
+> mapserv -v
+MapServer version 8.4.0 PROJ version 9.6 GDAL 
+> map2img -m heat.map -o output.png
+</code>
+</pre>
+    </script>
+</section>
+
+<section data-markdown data-background-image="images/users-between-lines-solid.svg" data-background-size="40%" data-background-opacity="10%">
+    <script type="text/template">
+        ## Workshop - Getting Started with MapServer
+
+        - First presented at [FOSS4G Europe 2024](https://talks.osgeo.org/foss4g-europe-2024-workshops/talk/HMEM8Z/)
+        - Again here at [FOSS4G Europe 2025](https://talks.osgeo.org/foss4g-europe-2025-workshops/talk/F3GHKV/)
+        - Available at https://geographika.github.io/getting-started-with-mapserver/
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+        ### [RFC 140](https://mapserver.org/development/rfc/ms-rfc-138.html) MapServer Homepage
+
+        Part of upcoming [8.6 release](https://github.com/MapServer/MapServer/milestone/65)
+
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <img src="images/mapserver-index-page.png" style="max-width: 45%; border: 1px solid black;" />
+            <img src="images/mapserver-index-page-json.png" style="max-width: 45%; border: 1px solid black;" />
+        </div>
+    </script>
+</section>
+
 <section data-markdown data-background="images/integrated-openlayers.png" data-background-opacity="0.2" data-background-size="95%">
     <script type="text/template">
         ### Integrated OpenLayers Viewer
@@ -85,50 +127,6 @@
             <img src="images/ol-ogc-features-example.png" alt="MapServer OGC Features Example" style="max-width: 100%; height: auto;">
         </div>
     </div>
-</section>
-
-
-
-<section data-markdown>
-    <script type="text/template">
-        ## Conda Builds
-
-        - [Windows, Linux, and OSX CI builds](https://github.com/MapServer/MapServer/pull/7102)
-
-        <pre>
-<code class="language-powershell" data-trim>
-> conda create --yes --name mapserver
-> conda activate mapserver
-> conda install --yes -c conda-forge mapserver
-> mapserv -v
-MapServer version 8.4.0 PROJ version 9.6 GDAL 
-> map2img -m heat.map -o output.png
-</code>
-</pre>
-    </script>
-</section>
-
-<section data-markdown>
-    <script type="text/template">
-        ### [RFC 140](https://mapserver.org/development/rfc/ms-rfc-138.html) MapServer Homepage
-
-        Part of upcoming [8.6 release](https://github.com/MapServer/MapServer/milestone/65)
-
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <img src="images/mapserver-index-page.png" style="max-width: 45%; border: 1px solid black;" />
-            <img src="images/mapserver-index-page-json.png" style="max-width: 45%; border: 1px solid black;" />
-        </div>
-    </script>
-</section>
-
-<section data-markdown data-background-image="images/users-between-lines-solid.svg" data-background-size="40%" data-background-opacity="10%">
-    <script type="text/template">
-        ## Workshop - Getting Started with MapServer
-
-        - First presented at [FOSS4G Europe 2024](https://talks.osgeo.org/foss4g-europe-2024-workshops/talk/HMEM8Z/)
-        - Again here at [FOSS4G Europe 2025](https://talks.osgeo.org/foss4g-europe-2025-workshops/talk/F3GHKV/)
-        - Available at https://geographika.github.io/getting-started-with-mapserver/
-    </script>
 </section>
 
 <section data-markdown data-background-image="images/heart-regular.svg" data-background-size="20%" data-background-opacity="10%">
